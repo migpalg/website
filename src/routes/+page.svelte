@@ -1,9 +1,14 @@
-<div class="flex items-center justify-center min-h-screen">
-  <div class="text-center">
-    <h1 class="text-4xl font-bold">Welcome to SvelteKit</h1>
+<div class="flex md:items-center py-24 md:py-0 justify-center min-h-screen">
+  <div class="text-center max-w-sm px-4">
+    <h1 class="text-4xl font-black mb-4">Welcome to my Website!</h1>
     <p class="text-base/8">
-      Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read
-      the documentation.
+      Visit my
+      <a
+        href="https://github.com/migpalg"
+        class="text-purple-500"
+        target="_blank">Github</a
+      >
+      profile for more details!
     </p>
   </div>
 </div>
