@@ -7,6 +7,11 @@ export default $config({
       removal: input?.stage === "production" ? "retain" : "remove",
       protect: ["production"].includes(input?.stage),
       home: "aws",
+      providers: {
+        aws: {
+          profile: "production"
+        }
+      }
     };
   },
   async run() {
@@ -15,6 +20,13 @@ export default $config({
         command: "npm run build",
         output: "build",
       },
+      domain: {
+        name: "migpalg.com",
+        redirects: [
+          "www.migpalg.com",
+        ],
+        dns: sst.aws.dns()
+      }
     });
   },
 });
