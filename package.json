@@ -32,5 +32,9 @@
       "esbuild"
     ]
   },
-  "packageManager": "pnpm@10.11.0"
+  "packageManager": "pnpm@10.11.0",
+  "dependencies": {
+    "@fontsource-variable/nunito-sans": "^5.2.5",
+    "clsx": "^2.1.1"
+  }
 }

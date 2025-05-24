@@ -1,14 +1,22 @@
-<div class="flex md:items-center py-24 md:py-0 justify-center min-h-screen">
-  <div class="text-center max-w-sm px-4">
-    <h1 class="text-4xl font-black mb-4">Welcome to my Website!</h1>
-    <p class="text-base/8">
-      Visit my
-      <a
-        href="https://github.com/migpalg"
-        class="text-purple-500"
-        target="_blank">Github</a
-      >
-      profile for more details!
-    </p>
-  </div>
+<script>
+  import { clsx } from "clsx";
+</script>
+
+<div class={clsx("max-w-2xl", "mx-auto", "my-24", "px-4")}>
+  <h1
+    class={clsx(
+      "text-6xl",
+      "md:text-8xl",
+      "font-black",
+      "font-display",
+      "mb-4",
+      "relative",
+      "overflow-hidden",
+    )}
+  >
+    Hello<span class="text-emerald-500">!</span>
+  </h1>
+  <p class={clsx("font-sans", "text-lg", "text-stone-300")}>
+    I'm <b>Miguel</b>, a Senior Full-Stack engineer.
+  </p>
 </div>

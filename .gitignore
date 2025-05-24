@@ -24,3 +24,7 @@ vite.config.ts.timestamp-*
 
 # sst
 .sst
+
+# editor config
+.idea
+.vscode

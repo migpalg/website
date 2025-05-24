@@ -7,6 +7,13 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@fontsource-variable/nunito-sans':
+        specifier: ^5.2.5
+        version: 5.2.5
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
     devDependencies:
       '@sveltejs/adapter-auto':
         specifier: ^6.0.0
@@ -200,6 +207,9 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
+
+  '@fontsource-variable/nunito-sans@5.2.5':
+    resolution: {integrity: sha512-J8Bi9OBUQvXwDvt9QofXD4joorYy3O9+4AU7cPx/ioa+xlH4HjAJNhA/N+nCu7IOMjFsbEbM2ZZCWQrsmQMsQw==}
 
   '@isaacs/fs-minipass@4.0.1':
     resolution: {integrity: sha512-wgm9Ehl2jpeqP3zw/7mo3kRHFp5MEDhqAdwy1fTGkHAwnkGOVsgpvQhL8B5n1qlb01jV3n/bI0ZfZp5lWA1k4w==}
@@ -1362,6 +1372,8 @@ snapshots:
 
   '@esbuild/win32-x64@0.25.4':
     optional: true
+
+  '@fontsource-variable/nunito-sans@5.2.5': {}
 
   '@isaacs/fs-minipass@4.0.1':
     dependencies:
