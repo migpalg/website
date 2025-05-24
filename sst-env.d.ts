@@ -5,8 +5,8 @@
 
 declare module "sst" {
   export interface Resource {
-    "Site": {
-      "type": "sst.aws.StaticSite"
+    "SvelteSite": {
+      "type": "sst.aws.SvelteKit"
       "url": string
     }
   }

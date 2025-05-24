@@ -5,7 +5,6 @@ export default $config({
     return {
       name: "aws-personal-static-site",
       removal: input?.stage === "production" ? "retain" : "remove",
-      protect: ["production"].includes(input?.stage),
       home: "aws",
       providers: {
         aws: {
@@ -15,16 +14,10 @@ export default $config({
     };
   },
   async run() {
-    new sst.aws.StaticSite("Site", {
-      build: {
-        command: "npm run build",
-        output: "build",
-      },
+    new sst.aws.SvelteKit("SvelteSite", {
       domain: {
         name: "migpalg.com",
-        redirects: [
-          "www.migpalg.com",
-        ],
+        redirects: ["www.migpalg.com"],
         dns: sst.aws.dns()
       }
     });
