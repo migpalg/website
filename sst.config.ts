@@ -1,4 +1,4 @@
-/// <reference path="./.sst/platform/config.d.ts" />
+import "./.sst/platform/config.d.ts";
 
 export default $config({
   app(input) {
@@ -8,9 +8,9 @@ export default $config({
       home: "aws",
       providers: {
         aws: {
-          profile: "production"
-        }
-      }
+          profile: "production",
+        },
+      },
     };
   },
   async run() {
@@ -18,8 +18,8 @@ export default $config({
       domain: {
         name: "migpalg.com",
         redirects: ["www.migpalg.com"],
-        dns: sst.aws.dns()
-      }
+        dns: sst.aws.dns(),
+      },
     });
   },
 });
