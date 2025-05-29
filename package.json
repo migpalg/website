@@ -9,7 +9,10 @@
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "dev": "vite dev",
     "prepare": "svelte-kit sync || echo ''",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint ."
   },
   "devDependencies": {
     "@eslint/css": "^0.8.1",
@@ -24,6 +27,8 @@
     "eslint-plugin-svelte": "^3.9.0",
     "globals": "^16.2.0",
     "prettier": "3.5.3",
+    "prettier-plugin-svelte": "^3.4.0",
+    "prettier-plugin-tailwindcss": "^0.6.11",
     "sst": "3.16.0",
     "svelte": "^5.0.0",
     "svelte-check": "^4.0.0",
