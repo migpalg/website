@@ -1,12 +1,16 @@
-import js from "@eslint/js";
-import svelte from "eslint-plugin-svelte";
+import { globalIgnores } from "eslint/config";
+import css from "@eslint/css";
 import globals from "globals";
+import js from "@eslint/js";
+import json from "@eslint/json";
+import prettier from "eslint-plugin-prettier/recommended";
+import svelte from "eslint-plugin-svelte";
 import ts from "typescript-eslint";
 import svelteConfig from "./svelte.config.js";
-import { globalIgnores } from "eslint/config";
 
 export default ts.config(
   js.configs.recommended,
+  prettier,
   ...ts.configs.recommended,
   ...svelte.configs.recommended,
   {
@@ -56,6 +60,18 @@ export default ts.config(
       // Override or add rule settings here, such as:
       // 'svelte/rule-name': 'error'
     },
+  },
+  {
+    files: ["**/*.jsonc", "**/*.json"],
+    plugins: { json },
+    language: "json/jsonc",
+    extends: ["json/recommended"],
+  },
+  {
+    files: ["**/*.css"],
+    plugins: { css },
+    language: "css/css",
+    extends: ["css/recommended"],
   },
 );
 
